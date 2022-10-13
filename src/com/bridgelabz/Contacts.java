@@ -10,6 +10,9 @@ public class Contacts {
     private String firstName, lastName, address, city, state, email;
     private int zip;
     private long phoneNumber;
+
+    public Contacts(String firstName, String lastName, String address, String city, String state, int zip, Long phoneNumber, String email) {
+    }
     /**
      * Used getter and setter to set and get the value.
      * Setter is used to set the value
