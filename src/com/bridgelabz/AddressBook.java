@@ -97,7 +97,7 @@ public class AddressBook {
 
 
     private void writeToFile() {
-        String path = "C:\\Users\\AM\\IdeaProjects//srush.txt";
+        String path = "C:\\Users\\Infinty system\\IdeaProjects//Vinayak.txt";
 
         StringBuffer addressBookBuffer = new StringBuffer();
         addressBookMap.values().stream().forEach(contact -> {
@@ -115,7 +115,7 @@ public class AddressBook {
 
 
     private void readFromFile() {
-        String path = "C:\\Users\\AM\\IdeaProjects//srush.txt";
+        String path = "C:\\Users\\Infinty system\\IdeaProjects//Vinayak.txt";
 
         System.out.println("Reading from : "+path+"\n");
         try {
