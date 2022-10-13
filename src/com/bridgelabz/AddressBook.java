@@ -1,5 +1,9 @@
 package com.bridgelabz;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,22 +23,24 @@ public class AddressBook {
         do {
             do {
                 System.out.println("\nWhich of the following operations would you like to perform?");
-                System.out.println("1. Add a New Address Book");
-                System.out.println("2. Edit an Existing Address Book");
-                System.out.println("3. Delete an Existing Address Book");
-                System.out.println("4. Search for Persons");
-                System.out.println("5. Display Persons by Location");
-                System.out.println("6. Display Persons Count by Location");
-                System.out.println("7. Display Address Book List");
-                System.out.println("8. List all Address Books");
-                System.out.println("9. Sort Address Books");
+                System.out.println("1. 	Add a New Address Book");
+                System.out.println("2. 	Edit an Existing Address Book");
+                System.out.println("3. 	Delete an Existing Address Book");
+                System.out.println("4. 	Search for Persons");
+                System.out.println("5. 	Display Persons by Location");
+                System.out.println("6. 	Display Persons Count by Location");
+                System.out.println("7. 	Display Address Book List");
+                System.out.println("8. 	List all Address Books");
+                System.out.println("9. 	Sort Address Books");
+                System.out.println("10. Read from File");
+                System.out.println("11. Write to File");
                 System.out.println("0. Exit");
                 System.out.print("\nEnter your choice : ");
                 choice = sc.nextInt();
 
-                if (!(choice >=0 && choice <= 9))
+                if (!(choice >=0 && choice <= 11))
                     System.out.println("\nInvalid choice!\nPlease try again.\n");
-            }while (!(choice >=0 && choice <= 9));
+            }while (!(choice >=0 && choice <= 11));
 
             switch (choice)
             {
@@ -74,11 +80,50 @@ public class AddressBook {
                     sortAddressBook();
                     break;
 
+                case 10 :
+                    readFromFile();
+                    break;
+
+                case 11 :
+                    writeToFile();
+                    break;
+
                 case 0 :
                     System.out.println("\nEXITED PROGRAM");
                     break;
             }
         }while(choice != 0);
+    }
+
+
+    private void writeToFile() {
+        String path = "C:\\Users\\AM\\IdeaProjects//srush.txt";
+
+        StringBuffer addressBookBuffer = new StringBuffer();
+        addressBookMap.values().stream().forEach(contact -> {
+            String personDataString = contact.toString().concat("\n");
+            addressBookBuffer.append(personDataString);
+        });
+
+        try {
+            Files.write(Paths.get(path), addressBookBuffer.toString().getBytes());
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void readFromFile() {
+        String path = "C:\\Users\\AM\\IdeaProjects//srush.txt";
+
+        System.out.println("Reading from : "+path+"\n");
+        try {
+            Files.lines(new File(path).toPath()).map(line -> line.trim()).forEach(employeeDetails -> System.out.println(employeeDetails));
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
 

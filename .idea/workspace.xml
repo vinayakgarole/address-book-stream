@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1202ad1-6216-4b3b-a3c3-855175f5ed48" name="Changes" comment="" />
+    <list default="true" id="f1202ad1-6216-4b3b-a3c3-855175f5ed48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMethods.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UC10_count_by_city_state" />
+        <entry key="$PROJECT_DIR$" value="UC12_sort_by_city_state_zip" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
