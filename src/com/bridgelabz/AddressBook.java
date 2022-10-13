@@ -27,7 +27,7 @@ public class AddressBook {
                 System.out.println("6. Display Persons Count by Location");
                 System.out.println("7. Display Address Book List");
                 System.out.println("8. List all Address Books");
-                System.out.println("9. Sort Address Books Alphabetically");
+                System.out.println("9. Sort Address Books");
                 System.out.println("0. Exit");
                 System.out.print("\nEnter your choice : ");
                 choice = sc.nextInt();
@@ -83,10 +83,53 @@ public class AddressBook {
 
 
     public void sortAddressBook() {
+        int  choice = 0;
+        do {
+            System.out.println("\nSort Address Book ");
+            System.out.println("1. By First Name");
+            System.out.println("2. By City");
+            System.out.println("3. By State");
+            System.out.println("4. By Zip");
+            System.out.print("\nEnter your choice : ");
+            choice = sc.nextInt();
+
+            if (!(choice >=1 || choice <= 4))
+                System.out.println("\nInvalid choice!\nPlease try again.\n");
+        }while (!(choice >=1 || choice <= 4));
+
         System.out.println("Displaying sorted Address Books : ");
-        for (Entry<String, ArrayList<Contact>> book : addressBookMap.entrySet()) {
-            ArrayList<Contact> sortedList = book.getValue().stream().sorted((e1, e2) -> e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toCollection(ArrayList<Contact>::new));
-            operations.displayAddressBook(book.getKey(), sortedList);
+        switch (choice)
+        {
+            case 1 :
+                for (Entry<String, ArrayList<Contact>> book : addressBookMap.entrySet()) {
+                    ArrayList<Contact> sortedList = book.getValue().stream().sorted((e1, e2) -> e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toCollection(ArrayList<Contact>::new));
+                    operations.displayAddressBook(book.getKey(), sortedList);
+                }
+                break;
+
+            case 2 :
+                for (Entry<String, ArrayList<Contact>> book : addressBookMap.entrySet()) {
+                    ArrayList<Contact> sortedList = book.getValue().stream().sorted((e1, e2) -> e1.getAddress().getCity().compareTo(e2.getAddress().getCity())).collect(Collectors.toCollection(ArrayList<Contact>::new));
+                    operations.displayAddressBook(book.getKey(), sortedList);
+                }
+                break;
+
+            case 3 :
+                for (Entry<String, ArrayList<Contact>> book : addressBookMap.entrySet()) {
+                    ArrayList<Contact> sortedList = book.getValue().stream().sorted((e1, e2) -> e1.getAddress().getState().compareTo(e2.getAddress().getState())).collect(Collectors.toCollection(ArrayList<Contact>::new));
+                    operations.displayAddressBook(book.getKey(), sortedList);
+                }
+                break;
+
+            case 4 :
+                for (Entry<String, ArrayList<Contact>> book : addressBookMap.entrySet()) {
+                    ArrayList<Contact> sortedList = book.getValue().stream().sorted((e1, e2) -> e1.getAddress().getZip().compareTo(e2.getAddress().getZip())).collect(Collectors.toCollection(ArrayList<Contact>::new));
+                    operations.displayAddressBook(book.getKey(), sortedList);
+                }
+                break;
+
+            default :
+                break;
         }
     }
 
@@ -116,7 +159,6 @@ public class AddressBook {
             default :
                 break;
         }
-
     }
 
 
