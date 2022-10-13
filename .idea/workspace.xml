@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1202ad1-6216-4b3b-a3c3-855175f5ed48" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/AddressBookMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UC7_Duplicate_Entry" />
+        <entry key="$PROJECT_DIR$" value="UC7_search_person" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,15 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="AddressBookSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.AddressBookSystem" />
+    <configuration name="AddressBookMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.AddressBookMethods" />
       <module name="address-book-stream" />
       <extension name="coverage">
         <pattern>
@@ -56,7 +59,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AddressBookSystem" />
+        <item itemvalue="Application.AddressBookMethods" />
       </list>
     </recent_temporary>
   </component>
