@@ -1,8 +1,10 @@
 package com.bridgelabz;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 public class AddressBookMethods {
     static Scanner sc = new Scanner(System.in);
     static Map<String, String> cityDictionary = new HashMap<>();
